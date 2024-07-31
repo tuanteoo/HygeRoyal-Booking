@@ -1,0 +1,307 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+:root{
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-leftright: 0 80px;
+}
+
+.detail_booking{
+    width: 100%;
+    max-height: 250px;
+    top: 0;
+    z-index: 99;
+    padding: 20px 80px;
+    background-color: var(--blue);
+    color: white;
+    overflow: auto;
+}
+
+.detail_booking::-webkit-scrollbar{
+    display: none;
+}
+
+.detail_booking > .list_bookings{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.detail_booking > .list_bookings > button {
+    color: var(--blue);
+    padding: 20px 50px;
+    border-radius: 48px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.detail_booking > .list_bookings > .layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail_booking > .list_bookings > .layout > .line:not(:last-child){
+    height: 1px;
+    background-color: white;
+    margin: 10px 80px;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item > .right {
+    line-height: 1.8;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item > .right > .booking_price > .price_default {
+    text-decoration: line-through;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item > .right > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 48px;
+}
+ 
+.detail_booking > .list_bookings > .layout > .booking_item > .right > div:nth-child(2) > p {
+    background-color: rgba(255, 255, 255, 0.12);
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item > .right > div:nth-child(2) > ion-icon {
+    font-size: 22px;
+    width: 100%;
+}
+
+.detail_booking > .list_bookings > .layout > .booking_item > .right > .booking_price > h3 {
+    font-size: 24px;
+}
+
+.container{
+    padding: 125px 80px;
+    width: 100%;
+}
+
+.container > .container__rooms > .room{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    border-radius: 17px;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.container > .container__rooms > .room > div:not(:first-child){
+    border-left: 1px solid var(--text-gray);
+    padding-left: 20px;
+}
+
+.container > .container__rooms > .room > div > img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.container > .container__rooms > .room > .introduce{
+    width: 100%;
+}
+
+.container > .container__rooms > .room > .introduce > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.container > .container__rooms > .room > .introduce > div > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container > .container__rooms > .room > .introduce > div > div > ion-icon{
+    font-size: 32px;
+}
+
+.container > .container__rooms > .room > .introduce > div > div:nth-child(2) > ion-icon{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container > .container__rooms > .room > .amenities{
+    line-height: 1.8;
+    width: 100%;
+}
+
+.container > .container__rooms > .room > .amenities > p{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.container > .container__rooms > .room > .amenities > .amenities-detail > div{
+    display: flex;
+    align-items:center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.container > .container__rooms > .room > .amenities > .amenities-detail > div > ion-icon{
+    color: #70C959;
+    font-size: 24px;
+}
+
+.container > .container__rooms > .room > .amenities > h4 {
+    margin-top: 40px;
+}
+
+.container > .container__rooms > .room > .price{
+    line-height: 1.8;
+    width: 100%;
+}
+
+.container > .container__rooms > .room > .price > p:first-child{
+    color: white;
+    background: url("../images/background-discount.png") no-repeat;
+    padding-left: 25px;
+    font-weight: 600;
+}
+
+.container > .container__rooms > .room > .price > h2{
+    margin-top: 20px;
+}
+
+.container > .container__rooms > .room > .price > .default_price{
+   text-decoration: line-through;
+}
+
+.container > .container__rooms > .room > .price > .days{
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.container > .container__rooms > .room > .price > .quantity-people{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#btn_quantity{
+    width: 45%;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    border: 2px solid var(--blue);
+    border-radius: 48px;
+    display: none;
+}
+
+.container > .container__rooms > .room > .price > div > div > p{
+    background-color: rgba(4, 74, 179, 0.12);
+    padding: 5px 15px;
+    font-weight: bold;
+    user-select: none;
+    width: 100%;
+    text-align: center;
+}
+
+#btn_quantity > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#btn_quantity > div > ion-icon{
+    font-size: 24px;
+}
+
+
+.add-room {
+    width: 45%;
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--blue);
+    padding: 10px 40px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+#warning {
+    margin-top: 30px;
+    color: red;
+    font-weight: bold;
+    user-select: none;
+}
+
+.container__faqs{
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 20px;
+    padding: 56px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    user-select: none;
+}
+
+.container__faqs > h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.container__faqs > .list__faqs > .faq > div{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__faqs > .list__faqs > .faq > div > ion-icon{
+    font-size: 24px;
+}
+
+.container__faqs > .list__faqs > .faq > div > div{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.container__faqs > .list__faqs > .faq > div > div > ion-icon{
+    font-size: 24px;
+}
+
+.icon-up-active{
+    transform: rotate(180deg);
+}
+
+.container__faqs > .list__faqs > .faq > .answer{
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 0 45px;
+    line-height: 1.8;
+    display: none;
+}
+
+.container__faqs > .list__faqs > hr{
+    margin-top: 20px;
+}

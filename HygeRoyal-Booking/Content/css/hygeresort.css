@@ -1,0 +1,434 @@
+﻿:root{
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-leftright: 0 80px;
+}
+
+.container{
+    margin: 100px 0;
+}
+
+.container__story{
+    padding: var(--padding-leftright);
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.1fr;
+}
+
+.container__story--content{
+    position: relative;
+}
+
+.container__story--content > h3{
+    letter-spacing: 5px;
+    color: var(--blue);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.container__story--content > p{
+    font-size: 64px;
+    line-height: 1;
+}
+
+.container__story--content > .story__layout{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 30px;
+}
+
+.container__story--content > .story__layout > hr{
+    flex: 1;
+    height: 2px;
+    background-color: var(--blue);
+    margin-top: 60px;
+}
+
+.container__story--content > div > div > p{
+    font-size: 24px;
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+.container__story--content > div > div > button{
+    border: none;
+    border-radius: 35px;
+    padding: 20px 30px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+}
+
+.container__story--banner {
+    grid-column: 3/4;
+    border: 4px solid var(--blue);
+    border-radius: 10px;
+    width: 80%;
+    height: 85%;
+    margin: 0 100px 40px 0;
+    position: relative;
+}
+
+.container__story--banner > img{
+    border-radius: 10px;
+    top: 6%;
+    position: absolute;
+    right: 8%;
+}
+
+.container__rooms{
+    margin-top: 150px;
+    width: 100%;
+    background: url("../images/half-rectangle.png") no-repeat bottom;
+    background-size: 100% 85%;
+    padding: var(--padding-leftright);
+}
+
+.container__rooms > h3{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 5px;
+}
+
+.container__rooms > p{
+    margin-top: 20px;
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.container__rooms--item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto-fill, 485px);
+    gap: 100px;
+    margin-top: 80px;
+}
+
+.container__rooms--item > div{
+    display: flex;
+    border-radius: 10px;
+}
+
+.container__rooms--item > div:first-child{
+    background: url("../images/zenvilla-cottage2.png") no-repeat;
+    background-size: cover;
+    width: 100%
+}
+
+.container__rooms--item > div:nth-child(2){
+    width:100%;
+    background: url("../images/zenvilla-cottage1.png") no-repeat;
+    background-size: cover;
+}
+
+.container__rooms--item > div > div{
+    align-self: flex-end;
+    padding: 15px 15px 30px 15px;
+    background-color: rgba(0, 0, 0, 0.54);
+    color: white;
+    line-height: 1.5;
+    border-radius: 0 0 10px 10px;
+}
+
+.container__rooms--item > div > div > h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container__rooms--item > div > div > p{
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.container__rooms--item > div > div > a{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container__rooms--item > div > div > .view-more{
+    background-color: transparent;
+    padding: 10px 50px;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.container__rooms--item > div > div > .book-room{
+    border: none;
+    padding: 12px 50px;
+    background-color: var(--blue);
+    border-radius: 8px;
+    margin-left: 50px;
+}
+
+.container__amenities{
+    margin-top: 150px;
+    padding: var(--padding-leftright);
+}
+
+.container__amenities > h3{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--blue);
+}
+
+.container__amenities--content{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+    width: 100%;
+    height: 500px;
+}
+
+.container__amenities--content > div > p:first-child{
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.container__amenities--content > div > p:last-child{
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 1.8;
+    width: 75%;
+}
+
+.container__amenities--content > div:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.container__amenities--content > div:last-child > div{
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.container__amenities--content > div:last-child > div > img{
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+.container__amenities--content > div:last-child > div > p{
+    font-size: 24px;
+}
+
+.container__testimonials{
+    margin-top: 150px;
+    background-color: #F9FAFF;
+    padding: 20px 80px;
+    width: 100%;
+}
+
+.container__testimonials > h3 {
+    font-weight: 100;
+    font-size: 64px;
+    text-align: center;
+}
+
+.container__testimonials--content{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+
+.container__testimonials--content > .card-slider{
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.container__testimonials--content > .card-slider > .card {
+    margin-top: 60px;
+    display: flex;
+    flex: 0 0 100%;
+    user-select: none;
+    padding: 0 80px;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__testimonials--content > .card-slider > .card > img {
+    width: 250px;
+    height: 250px;
+}
+
+.container__testimonials--content > .card-slider > .card > .content{
+    width: 50%;
+    line-height: 2;
+}
+
+.container__testimonials--content > .card-slider > .card > .content > p:nth-child(2){
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.container__testimonials--content > .card-slider > .card > .content > p:last-child{
+    font-size: 18px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.dot {
+    height: 13px;
+    width: 14px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+.container__gallery{
+    padding: var(--padding-leftright);
+    margin-top: 150px;
+}
+
+.container__gallery > h3 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: var(--blue);
+}
+
+.container__gallery > p{
+    font-size: 64px;
+    margin-top: 30px;
+}
+
+.container__gallery > div{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 70px;
+
+    position: relative;
+    user-select: none;
+}
+
+.container__gallery > div::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #E0E7FF;
+    top: 100px;
+    left: 200px;
+}
+
+.container__gallery > div::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #E0E7FF;
+    bottom: 20px;
+    right: 200px;
+}
+
+.container__gallery > div > img{
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.container__location{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.container__location > iframe{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.container__location > h3{
+    font-size: 24px;
+    color: var(--blue);
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-align: start;
+    margin-left: 80px;
+}
+
+.container__location > p{
+    font-size: 64px;
+    text-align: start;
+    margin-left: 80px;
+}
+
+.container__contactUs{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.container__contactUs > h3{
+    font-size: 24px;
+    color: var(--blue);
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.container__contactUs > p {
+    font-size: 64px;
+    margin-bottom: 80px;
+}
+
+.container__contactUs > div {
+    margin: 0 auto;
+    display: grid;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 30px
+}
+
+.container__contactUs > div > .input{
+    padding: 20px 20px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    font-size: 18px;
+}
+
+.container__contactUs > div > .input::placeholder{
+    color: rgba(0, 0, 0, 0.31);
+    font-size: 18px;
+}
+
+.container__contactUs > div > .input.message{
+    grid-column: 1/3;
+    grid-row: 3/5;
+    resize: none;
+}
+
+.container__contactUs > button {
+    margin-top: 45px;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    padding: 10px 50px;
+    color: var(--blue);
+    background-color: transparent;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 640px){
+    .container__story {
+       padding: 0 20px;
+       flex-direction: column;
+    }
+}

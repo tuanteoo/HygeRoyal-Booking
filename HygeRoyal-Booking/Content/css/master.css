@@ -1,0 +1,422 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-nav: 0 60px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+}
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.listpage > .nav_list{
+    display: flex;
+    font-size: 18px;
+    gap: 50px;
+}
+
+.listpage > .nav_list > .nav_item > a{
+    color: var(--text-black);
+}
+
+.navigation .button a {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+    background-color: var(--blue);
+    color: white;
+}
+
+.avatar{
+    display: none;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    user-select: none;
+}
+
+.avatar > .img-avatar {
+    display: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.avatar > button{
+    border: none;
+    background: none;
+    font-size: 25px;
+    text-align: center;
+    align-content: center;
+    padding: 5px 8px 2px 8px;
+    border: 2px solid black;
+    border-radius: 50%;
+} 
+
+.avatar > .avatar__event{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 10;
+    width: 110%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: white;
+    border-radius: 10px;
+    transform: translate(0,10%);
+}
+
+.avatar > .avatar__event > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.avatar > .avatar__event > div:hover{
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    cursor: pointer;  
+}
+
+.avatar > .avatar__event > div:last-child > ion-icon{
+    transform: scaleX(-1);
+}
+
+.avatar > .avatar__event > div > button{
+    border: none;
+    background: none;
+    font-weight: 400;
+    height: 100%;
+    cursor: pointer;
+}
+
+.banner {
+    padding: 0px 80px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.banner__landingpade {
+    width: 100%;
+    height: 660px;
+    background: url("../images/landingpage.png") no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    position: relative;
+}
+
+.banner__landingpade--introduce {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner__landingpade--introduce > h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner__landingpade--introduce > p {
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.banner__landingpade--checkavailability > .checkavailability__information {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 280px;
+    width: 60%;
+    padding: 20px 0px;
+    padding-right: 80px;
+    display: grid;
+    left: 45%;
+    bottom: 0;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.banner__landingpade--checkavailability > .checkavailability__information > .grid-cell {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.grid-cell:not(:first-child):not(:last-child) {
+    border-left: 1px #E8E8E8 solid;
+}
+
+.grid-cell > ion-icon {
+    color: var(--blue);
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+.grid-cell > div > p:first-child {
+    font-size: 20px;
+    color: var(--text-black);
+}
+
+.grid-cell > div > p:last-child {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.banner__landingpade--checkavailability > .checkavailability__information > button {
+    position: absolute;
+    border: none;
+    border-radius: 280px;
+    height: 100%;
+    right: 0;
+    transform: translateX(+65%);
+    padding: 0 30px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    padding-top: 20px;
+    background-color: #DEE8F5;
+    padding: 30px 80px 60px 80px;
+}
+
+.footer > div > h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer > div > p{
+    font-size: 20px;
+}
+
+.list-contact{
+    display:flex;
+    gap: 20px;
+}
+
+.list-contact > ion-icon{
+    color: var(--blue);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    font-size:20px
+}
+
+.copyright{
+    text-align:center;
+    padding:10px;
+    background-color:var(--blue);
+    color:white;
+}
+
+@media only screen and (max-width: 640px) {
+    .navigation{
+        padding: 10px 20px;
+    }
+
+    .navigation > .logo{
+        order: 2;
+    }
+
+    .navigation > .nav_bar{
+        order: 1;
+        position: relative;
+    }
+
+    .listpage{
+        display: none;
+    }
+
+    .listpage > .nav_list {
+        flex-direction: column;
+        gap: 0px;
+        position: absolute;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        z-index: 99;
+        background: white;
+        border-radius: 12px;
+        top: 150%;
+    }
+
+    .listpage > .nav_list > .nav_item{
+        padding: 10px 50px 10px 10px;
+    }
+
+    .navigation > .button{
+        order: 3;
+    }
+
+    .navigation > .nav_bar > .burger{
+        display: block;
+    }
+
+    .navigation > .avatar{
+        order: 4;
+    }
+
+    .banner{
+        padding: 0px;
+    }
+
+    .banner__landingpade--introduce {
+        position: absolute;
+        top: 36%;
+        left: 0;
+        transform: translate(0%,-80%);
+    }
+
+    .banner__landingpade--introduce > h2{
+        font-size: 28px;
+    }
+
+    .banner__landingpade--introduce > p{
+        font-size: 18px;
+        padding: 0 80px;
+    }
+
+    .banner__landingpade--checkavailability > .checkavailability__information {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        padding: 12px;
+        border-radius: 20px;
+        left: 50%;
+        row-gap: 16px;
+        transform: translate(-50%,-10%);
+        width: 70%;
+    }
+
+    .grid-cell{
+        align-items: center;
+        border-radius: 8px;
+        border: 1px solid #E6E6E6;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .grid-cell:first-child{
+        grid-column: 1/3;
+    }
+
+    .grid-cell:nth-child(2) {
+        grid-column: 1/2;
+    }
+
+    .grid-cell:nth-child(3) {
+        grid-column: 2/3;
+    }
+
+    .grid-cell:nth-child(4) {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+
+    .banner__landingpade--checkavailability > .checkavailability__information > button {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(0);
+        grid-column: 1/3;
+        border-radius: 8px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 30px 20px 60px 20px;
+    }
+
+    .footer > div:first-child{
+        align-self: center;
+    }
+
+    .footer > div > h3 {
+        margin: 20px 0px;
+    }
+}

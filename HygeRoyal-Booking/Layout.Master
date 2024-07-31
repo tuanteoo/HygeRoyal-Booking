@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="HygeRoyal_Booking.Layout" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" href="Content/images/logo.png"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/css/master.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header id="header" runat="server">
+            <nav class="navigation">
+                <div class="logo">
+                    <a href="../Pages/Home.aspx"><img src="../../Content/images/logo.png" alt="Hyge Royal"></a>
+                </div>
+                <div class="nav_bar">
+                    <label class="burger" for="burger">
+                        <input type="checkbox" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <div class="listpage" id="listpage">
+                        <ul class="nav_list" id="nav_list">
+                            <li class="nav_item"><a id="nav_item1" href="#" runat="server">Resort</a></li>
+                            <li class="nav_item"><a id="nav_item2" href="#" runat="server">Amenities</a></li>
+                            <li class="nav_item"><a id="nav_item3" href="#" runat="server">Nearby Landmarks</a></li>
+                            <li class="nav_item"><a id="nav_item4" href="#" runat="server">About Us</a></li>
+                            <li class="nav_item"><a id="nav_item5" href="#" runat="server">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="button" id="button" runat="server">
+                    <a href="../../Pages/SignIn_SignUp.aspx">Sign In</a>
+                    <a href="../../Pages/SignIn_SignUp.aspx">Sign Up</a>
+                </div>
+                <div class="avatar" id="avatar" runat="server">
+                    <div class="img-avatar"></div>
+                    <button id="person" type="button" runat="server"><ion-icon name="person-outline"></ion-icon></button>
+                    <h3 id="username" runat="server">Nguyễn Tuấn</h3>
+                    <div class="avatar__event" id="avatar__event">
+                        <div id="account" runat="server">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <button>Manage Account</button>
+                        </div>
+                        <div id="trips" runat="server">
+                            <ion-icon name="airplane-outline"></ion-icon>
+                            <button runat="server">Trips</button>
+                        </div>
+                        <div>
+                            <ion-icon name="log-out-outline" class="sign-out"></ion-icon>
+                            <button onserverclick="SignOut" runat="server">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="banner">
+                <div class="banner__landingpade" id="banner__landingpade" runat="server">
+                    <div class="banner__landingpade--introduce">
+                        <h2 id="heading" runat="server">Enjoy the Luxurious Stay at the<br> Resorts of Hyge Royal</h2>
+                        <p id="paragraph" runat="server">Experience opulent luxury and exceptional service at the exquisite Hyge Royal</p>
+                    </div>
+                    <div class="banner__landingpade--checkavailability">
+                        <div class="checkavailability__information">
+                            <div class="grid-cell">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <div>
+                                    <p>Resort</p>
+                                    <p>Zen Villa</p>
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                                <div>
+                                    <p>Check In</p>
+                                    <p>10 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                                <div>
+                                    <p>Check Out</p>
+                                    <p>11 Aug 2024</p>
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <div>
+                                    <p>Rooms for</p>
+                                    <p>1 room, 2guests</p>
+                                </div>
+                            </div>
+                            <button id="btn--checkavai">Check Availability</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+             <div class="footer">
+                 <div>
+                     <img src="../../Content/images/logo.png" alt="Hyge Royal" title="Hyge Royal | Booking Resort"/>
+                     <br />
+                     <br />
+                     <p>We catalyze your<br />luxurious vacation</p>
+                 </div>
+                 <div>
+                     <h3>Address</h3>
+                     <p>
+                         96a P. Dinh Cong, Phuong Liet,<br />Hoang Mai, HaNoi, VietNam
+                         <br /><br />
+                         support@hygeinfotech.com<br />
+                         Mon - Friday, 8am : 5pm
+                     </p>
+                 </div>
+                 <div>
+                     <h3>Follow Us</h3>
+                     <div class="list-contact">
+                         <ion-icon name="logo-instagram"></ion-icon>
+                         <ion-icon name="logo-facebook"></ion-icon>
+                         <ion-icon name="logo-linkedin"></ion-icon>
+                         <ion-icon name="logo-twitter"></ion-icon>
+                         <ion-icon name="logo-youtube"></ion-icon>
+                     </div>
+                 </div>
+             </div>
+            <div class="copyright">
+                <p>&copy; 2024 Hyge Royal. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </form>
+    <script type="text/javascript">
+        const avatar_event = document.getElementById('avatar__event');
+        let isVisible = false;
+
+        document.getElementById('avatar').addEventListener('click', () => {
+            if (isVisible) {
+                avatar_event.style.display = "none";
+            }
+            else {
+                avatar_event.style.display = "block";
+            }
+
+            isVisible = !isVisible;
+        });
+
+        const checkbox = document.getElementById('burger');
+        const listpage = document.getElementById('listpage');
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                listpage.style.display = "block";
+            } else {
+                listpage.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+﻿:root {
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-leftright: 0 60px;
+}
+main {
+    padding: 30px 80px;
+}
+
+.container__ourResorts{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.container__ourResorts > h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container__ourResorts--introduce{
+    display: grid;
+    grid-template-columns: 1fr 0.15fr 1fr;
+    grid-template-rows: repeat(2,455px);
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.container__ourResorts--introduce > div:first-child{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background: url("../images/ZenVilla.png") no-repeat;
+    background-size: cover;
+    border-radius: 44px;
+}
+
+.container__ourResorts--introduce > div:nth-child(2){
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+.container__ourResorts--introduce > div:nth-child(3){
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background: url("../images/HygeResort.png") no-repeat;
+    background-size: cover;
+    border-radius: 44px;
+}
+
+.container__ourResorts--introduce > div:last-child{
+    grid-column:1/2;
+    grid-row: 2/3;
+}
+
+
+.container__ourResorts--introduce>div>h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-top: 60px;
+}
+
+.container__ourResorts--introduce>div>p{
+    font-size: 20px;
+    color: var(--text-gray);
+    margin: 30px 0;
+    line-height: 2;
+}
+
+.container__ourResorts--introduce>div>a{
+    border: var(--blue) solid 1px;
+    border-radius: 35px;
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 50px;
+    background-color: transparent;
+}
+
+.container__amenities{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.container__amenities--content > h3{
+    font-size: 30px;
+    color: var(--text-black);
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.container__amenities--content > p{
+    color: var(--text-gray);
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.container__amenities--content > button{
+    border: none;
+    border-radius: 35px;
+    padding: 20px 25px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+}
+
+.container__amenities--list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.container__amenities--list > .item{
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.container__amenities--list > .item > img{
+    margin-bottom: 20px;
+}
+
+.container__discover{
+    width: 100%;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 460px;
+    gap: 40px;
+    border-radius: 44px;
+    background-color: #F5F8FC;
+}
+
+.container__discover > div:first-child{
+    background: url("../images/HygeResort.png") no-repeat;
+    background-size: cover;
+}
+
+.container__discover > div > h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.container__discover > div > p{
+    color: var(--text-gray);
+    line-height: 2;
+    margin-top: 25px;
+}
+
+.container__discover > div > button{
+    margin-top: 50px;
+    border: none;
+    border-radius: 35px;
+    padding: 20px 30px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 600;
+}
+
+.container__offbeat > h2{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.container__offbeat--list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 486px;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.container__offbeat--list > div{
+    border-radius: 16px;
+    background-size: cover;
+}
+
+.container__offbeat--list > div:first-child{
+    background-image: url("../images/Offbeat1.png");
+}
+
+.container__offbeat--list > div:nth-child(2){
+    background-image: url("../images/Offbeat2.png");
+}
+
+.container__offbeat--list > div:last-child{
+    background-image: url("../images/Offbeat3.png");
+}
+
+.container__evaluation--heading{
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.container__evaluation--heading > h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.container__evaluation--heading > ion-icon{
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.container__evaluation--dot {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #525252;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #EEB609;
+    width: 15px;
+    height: 15px;
+}
+
+.container__evaluation--slider {
+    margin-top: 40px;
+    width: 100%;
+    height: 466px;
+    background-repeat: no-repeat;
+    background-image:url("../images/evaluation-background.png");
+    background-position: center;
+    overflow: hidden;
+}
+
+.container__evaluation--slider .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container__evaluation--slider > .slider-wrapper > .slider-card{
+    flex: 0 0 33.33%;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 2;
+    padding: 0 40px;
+}
+
+.container__evaluation--slider > .slider-card > .name{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.container__evaluation--slider > .slider-card > .evaluation {
+    font-size: 12px;
+}
+
+.container__maps{
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container__maps > iframe{
+    border-radius: 16px;
+}
+
+.container__maps--content{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 20px 40px;
+    transform: translate(-50%,50%);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    line-height: 2;
+}
+
+.container__maps--content > p > span{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.container__maps--content > p:last-child{
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 640px) {
+
+    main {
+        padding: 20px 20px;
+    }
+
+    .container__ourResorts--introduce{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,1fr);
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .container__ourResorts--introduce > div:first-child{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        background: url("../images/ZenVilla.png") no-repeat;
+        background-size: cover;
+        border-radius: 44px;
+    }
+
+    .container__ourResorts--introduce > div:nth-child(2){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .container__ourResorts--introduce > div:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 3/4;
+        background: url("../images/HygeResort.png") no-repeat;
+        background-size: cover;
+        border-radius: 44px;
+    }
+
+    .container__ourResorts--introduce > div:last-child{
+        grid-column:1/2;
+        grid-row: 4/5;
+    }
+
+    .container__amenities {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 50px;
+    }
+    .container__amenities--list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+
+    .container__ourResorts--introduce > div > h2 {
+        margin-top: 5px;
+    }
+
+    .container__discover {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+        border-radius: 50px;
+    }
+
+    .container__discover > div:first-child {
+        background: url("../images/HygeResort.png") no-repeat;
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+    .container__discover > div:last-child {
+        padding: 0px 20px 30px 20px;
+    }
+
+    .container__offbeat--list {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 300px;
+        gap: 5px;
+        margin-top: 50px;
+    }
+
+    .container__maps > iframe {
+        width: 100%;
+    }
+
+    .container__maps--content{
+        width: 90%;
+    }
+
+    .container__evaluation--slider > .slider-wrapper > .slider-card{
+        flex: 0 0 100%;
+    }
+}

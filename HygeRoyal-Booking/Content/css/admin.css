@@ -1,0 +1,84 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+:root {
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-leftright: 0 80px;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #044AB3;
+    --text-black: #222222;
+    --text-gray: #555555;
+    --padding-leftright: 0 60px;
+}
+body{
+    padding: 10px 80px;
+}
+
+header > nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+header > nav > ul > li{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.page + .page{
+    margin-left: 50px;
+}
+
+header > nav > ul > li > a{
+    font-size: 20px;
+    color: black;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    padding-top: 20px;
+    background-color: #DEE8F5;
+    padding: 30px 80px 60px 80px;
+}
+
+.footer > div > h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer > div > p{
+    font-size: 20px;
+}
+
+.list-contact{
+    display:flex;
+    gap: 20px;
+}
+
+.list-contact > ion-icon{
+    color: var(--blue);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    font-size:20px
+}
+
+.copyright{
+    text-align:center;
+    padding:10px;
+    background-color:var(--blue);
+    color:white;
+}
