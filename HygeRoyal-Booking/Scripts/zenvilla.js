@@ -24,7 +24,7 @@
         });
     }
 
-    // Drag and slide functionality
+
     let startX = 0;
     let isDragging = false;
     let shiftX = 0;

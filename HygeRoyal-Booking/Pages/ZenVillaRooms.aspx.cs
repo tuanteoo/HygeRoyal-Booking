@@ -76,7 +76,7 @@ namespace HygeRoyal_Booking.Pages
             {
                 using (SqlCommand command_select = new SqlCommand(query_select, connection))
                 {
-                    command_select.Parameters.AddWithValue("@email", Session["UserEmail"]);
+                    command_select.Parameters.AddWithValue("@email", HttpContext.Current.Session["UserEmail"]);
                     try
                     {
                         connection.Open();

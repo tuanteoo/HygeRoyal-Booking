@@ -11,9 +11,9 @@ namespace HygeRoyal_Booking.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["IsSignIn"] == null)
+            if (HttpContext.Current.Session["IsSignIn"] == null)
             {
-                Session["IsSignIn"] = false;
+                HttpContext.Current.Session["IsSignIn"] = false;
             }
         }
     }

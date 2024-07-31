@@ -7,6 +7,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../Content/css/account.css"/>
     <link rel="icon" type="image/png" href="../Content/images/logo.png"/>
     <title>HygeRoyal.com</title>
@@ -24,18 +25,18 @@
                 </div>
                 <span>or use your email for registeration</span>
                 <div class="input-control">
-                    <input type="text" placeholder="Name" id="upname" runat="server"/>
+                    <input type="text" placeholder="Name" id="upname"/>
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
-                    <input type="text" placeholder="Email" id="upemail" runat ="server"/>
+                    <input type="text" placeholder="Email" id="upemail"/>
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
-                    <input type="password" placeholder="Password" id="uppassword" runat="server"/>
+                    <input type="password" placeholder="Password" id="uppassword"/>
                     <div class="error"></div>
                 </div>
-                <button id="btn_signup" runat="server" onserverclick="BtnSignUp_Click">Sign Up</button>
+                <button id="btn_signup" type="button" onclick="SignUp()">Sign Up</button>
             </div>
         </div>
         <div class="form-container sign-in">
@@ -49,15 +50,15 @@
                 </div>
                 <span>or use your email password</span>
                 <div class="input-control">
-                    <input type="text" placeholder="Email" id="inemail" runat="server"/>
+                    <input type="text" placeholder="Email" id="inemail"/>
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
-                    <input type="password" placeholder="Password" id="inpassword" runat="server"/>
+                    <input type="password" placeholder="Password" id="inpassword"/>
                     <div class="error"></div>
                 </div>
                 <a href="#">Forget Your Password?</a>
-                <button id="btn_signin" onserverclick="BtnSignIn_Click" runat="server">Sign In</button>
+                <button id="btn_signin" type="button" onclick="SignIn()">Sign In</button>
             </div>
         </div>
         <div class="toggle-container">
@@ -75,6 +76,6 @@
             </div>
         </div>
     </form>
-    <script type="text/javascript" src="../Scripts/account.js"></script>
+    <script type="text/javascript" src="../Scripts/account.js?v=1.0.0"></script>
 </body>
 </html>

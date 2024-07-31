@@ -90,7 +90,7 @@
                             <p class="default_price" data-id="<%= room.ID %>">$ <%= String.Format("{0:N2}",room.Price) %></p>
                             <p class="days">1 Room Per Night</p>
                             <p class="quantity-people">2 Adults, 0 Children</p>
-                            <div id="roomForm" data-email="<%= Session["UserEmail"] %>">
+                            <div id="roomForm" data-email="<%= HttpContext.Current.Session["UserEmail"] %>">
                                 <div id="btn_quantity" data-id='<%= room.ID %>'>
                                     <div class="minus" data-id='<%= room.ID %>' onclick="minusquantity(event)">
                                         <ion-icon name="remove-outline"></ion-icon>
@@ -102,7 +102,7 @@
                                         <ion-icon name="add-outline"></ion-icon>
                                     </div>
                                 </div>
-                                <button class="add-room" type="button" onclick="addroom(event)" data-id='<%= room.ID %>' data-login='<%= Session["IsSignIn"] %>'>Add Room</button>
+                                <button class="add-room" type="button" onclick="addroom(event)" data-id='<%= room.ID %>' data-login='<%= HttpContext.Current.Session["IsSignIn"] %>'>Add Room</button>
                             </div>
                             <p id="warning">Only 1 Room Left. Hurry!</p>
                         </div>

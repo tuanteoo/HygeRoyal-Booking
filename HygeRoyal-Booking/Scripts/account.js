@@ -17,13 +17,13 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-btnSignUp.addEventListener('click', () => {
+function SignUp() {
     validateInputUp();
-});
+}
 
-btnSignIn.addEventListener('click', () => {
+function SignIn() {
     validateInputIn();
-});
+}
 
 
 const setError = (element, message) => {
@@ -72,6 +72,26 @@ const validateInputUp = () => {
     } else {
         setSuccess(upPassword);
     }
+
+    if (upName.value != '' && upEmail.value != '' && isValidEmail(upEmail.value) && upPassword.value != '' && upPassword.value.trim().length >= 8 && upPassword.value.trim().length <= 16) {
+        $.ajax({
+            type: "POST",
+            url: "SignIn_SignUp.aspx/SignUp",
+            data: JSON.stringify({
+                username: upName.value,
+                password: upPassword.value,
+                email: upEmail.value
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                alert(response.d);
+            },
+            error: function (error) {
+                alert('An error occurred:' + error.responseText);
+            }
+        });
+    }
 };
 
 const validateInputIn = () => {
@@ -92,4 +112,28 @@ const validateInputIn = () => {
         setSuccess(inPassword);
     }
 
+    if (inEmail.value != '' && isValidEmail(inEmail.value) && inPassword.value != '' && inPassword.value.trim().length >= 8 && inPassword.value.trim().length <= 16) {
+        $.ajax({
+            type: "POST",
+            url: "SignIn_SignUp.aspx/SignIn",
+            data: JSON.stringify({
+                email: inEmail.value,
+                password: inPassword.value,
+                isSignIn: true
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response.d === "Success") {
+                    window.location.href = 'Home.aspx';
+                }
+                else {
+                    alert(response.d);
+                }
+            },
+            error: function (error) {
+                alert('An error occurred:' + error.responseText);
+            }
+        });
+    }
 };

@@ -16,7 +16,7 @@ namespace HygeRoyal_Booking
             {
                 button.Style["display"] = "none";
                 avatar.Style["display"] = "flex";
-                username.InnerText = (string)Session["UserName"];
+                username.InnerText = HttpContext.Current.Session["UserName"].ToString();
             }
 
             string currentPage = System.IO.Path.GetFileName(Request.Path);
